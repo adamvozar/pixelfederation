@@ -12,7 +12,7 @@ services:
       - "8080:80"
     environment:
       - CAKE_ENV=development
-    command: apache2-foreground
+    command: /bin/bash -c "composer install && apache2-foreground"
 
   db:
     image: mysql:8.0

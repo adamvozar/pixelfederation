@@ -10,8 +10,6 @@ WORKDIR /var/www/html
 
 COPY ./app /var/www/html
 
-RUN composer install
-
 RUN a2enmod rewrite
 
 RUN chown -R www-data:www-data /var/www/html
