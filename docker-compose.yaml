@@ -12,8 +12,13 @@ services:
       - "8080:80"
     environment:
       - CAKE_ENV=development
-    command: /bin/bash -c "composer install && apache2-foreground && bin/cake migrations migrate"
-
+    command: >
+      /bin/bash -c "
+      composer install &&
+      bin/cake migrations migrate &&
+      bin/cake cache clear_all &&
+      echo 'Application running at http://localhost:8080' &&
+      apache2-foreground"
   db:
     image: mysql:8.0
     container_name: mysql-db
