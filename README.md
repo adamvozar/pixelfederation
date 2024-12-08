@@ -1,4 +1,4 @@
-# CakePHP Application Skeleton
+# Pixelfederation Application Skeleton
 
 1. Install Docker Desktop
 2. ```clone repository```
@@ -7,5 +7,5 @@
 5. ```docker-compose build```
 6. ```docker-compose up```
 7. ```open http://localhost:8080/```
-8. ```cd app```
+8. ```docker exec -it cakephp-app bash```
 9. run tests: ```vendor/bin/phpunit```

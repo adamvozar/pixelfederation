@@ -17,7 +17,7 @@ services:
       composer install &&
       bin/cake migrations migrate &&
       bin/cake cache clear_all &&
-      echo 'Application running at http://localhost:8080' &&
+      echo '***************** Application running at http://localhost:8080/ *****************' &&
       apache2-foreground"
   db:
     image: mysql:8.0
